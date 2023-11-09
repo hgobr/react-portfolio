@@ -1,0 +1,5 @@
+@use './../../index.scss' as *;
+
+.content {
+  margin: $content-margin;
+}

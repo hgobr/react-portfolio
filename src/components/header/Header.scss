@@ -1,0 +1,167 @@
+@use './../../index.scss' as *;
+
+.header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 1rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    font-weight: lighter;
+  }
+
+  .wrapLogo {
+    display: flex;
+    align-items: center;
+    transition: ease-in-out 0.2s;
+
+    .logo {
+      margin-right: 0.5rem;
+      height: 3.5rem;
+      transition: all 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .mobileNavButton {
+    display: none;
+  }
+
+  .mainNav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+
+    a {
+      text-decoration: none;
+      color: rgb(236, 236, 236);
+      position: relative;
+
+      [aria-hidden='true'] {
+        font-weight: 500;
+        margin-inline-end: 0.5em;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: $blue;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -5px;
+        border-radius: 3px;
+        transition: 0.3s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &:hover {
+        text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.15),
+          1px -1px 0 rgba(255, 255, 255, 0.15),
+          -1px 1px 0 rgba(255, 255, 255, 0.15),
+          1px 1px 0 rgba(255, 255, 255, 0.15);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  @supports (backdrop-filter: blur(0.5rem)) {
+    .mainNav {
+      backdrop-filter: blur(0.5rem);
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (max-width: 43rem) {
+    .wrapNav {
+      margin-left: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .mainNav {
+      position: fixed;
+      z-index: 999;
+
+      inset: 0 0 0 30%;
+      flex-direction: column;
+      padding: min(30vh, 10rem) 2rem;
+      background: rgba(0, 0, 0, 0.9);
+      transform: translateX(100%);
+      transition: transform 350ms ease-out;
+    }
+
+    @supports (backdrop-filter: blur(1rem)) {
+      .mainNav {
+        backdrop-filter: blur(1rem);
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .mainNav[dataVisible='true'] {
+      transform: translateX(0);
+    }
+
+    .mobileNavButton {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+
+      background: url('../medias/burger_outline_128.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(207deg)
+        brightness(105%) contrast(100%);
+      opacity: 0.7;
+      border: 0;
+      width: 2rem;
+      aspect-ratio: 1;
+      top: 1rem;
+      right: 2rem;
+    }
+
+    .mobileNavButton[aria-expanded='true'] {
+      background-image: url(../medias/cross_128px.png);
+    }
+
+    .wrapLogo {
+      margin-top: 0.75rem;
+    }
+
+    .textLogo {
+      display: none;
+    }
+  }
+
+  @media (min-width: 43em) and (max-width: 55em) {
+    .mainNav a > span[aria-hidden] {
+      display: none;
+    }
+    .wrapLogo {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 43em) {
+    .mainNav {
+      padding-block: 1.5rem;
+      padding-inline: clamp(3rem, 10vh, 10rem);
+      gap: (1.5rem, 5vw, 3rem);
+    }
+  }
+}

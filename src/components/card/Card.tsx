@@ -1,7 +1,9 @@
+import './Card.scss';
+
 function Card() {
   return (
-    <div className="card">
-      <h1>Card</h1>
+    <div>
+      <h3>Card</h3>
     </div>
   );
 }
