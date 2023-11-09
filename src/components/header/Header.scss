@@ -7,7 +7,7 @@
     justify-content: space-between;
     top: 1rem;
     margin-top: 2rem;
-    margin-left: 3rem;
+    margin-left: 4rem;
     font-weight: lighter;
   }
 
@@ -18,7 +18,7 @@
 
     .logo {
       margin-right: 0.5rem;
-      height: 3.5rem;
+      height: 4rem;
       transition: all 0.5s;
 
       &:hover {
@@ -152,15 +152,12 @@
     .mainNav a > span[aria-hidden] {
       display: none;
     }
-    .wrapLogo {
-      text-align: center;
-    }
   }
 
   @media (min-width: 43em) {
     .mainNav {
       padding-block: 1.5rem;
-      padding-inline: clamp(3rem, 10vh, 10rem);
+      padding-inline: clamp(3rem, 11vh, 10rem);
       gap: (1.5rem, 5vw, 3rem);
     }
   }

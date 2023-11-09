@@ -2,4 +2,68 @@
 
 .content {
   margin: $content-margin;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: $blue;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    font-weight: 200;
+  }
+
+  .underlineLink {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    outline: none;
+    position: relative;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    border-bottom: 1px solid #008ed7;
+    padding: 1px;
+
+    &::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      inset: 0 0 0 0;
+      background: #008ed7;
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+  }
 }

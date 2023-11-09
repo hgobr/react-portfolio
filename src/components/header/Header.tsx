@@ -7,8 +7,9 @@ function Header() {
     <header className="header">
       <nav>
         <div className="wrapLogo">
-          <Link to="/about" />
-          <img className="logo" src={HBlogo} />
+          <Link to="/">
+            <img className="logo" src={HBlogo} />
+          </Link>
         </div>
         <ul className="mainNav">
           <li>
