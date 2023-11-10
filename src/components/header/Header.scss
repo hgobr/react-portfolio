@@ -43,6 +43,7 @@
     a {
       text-decoration: none;
       color: rgb(236, 236, 236);
+
       position: relative;
 
       [aria-hidden='true'] {
@@ -76,6 +77,15 @@
         -o-transition: all 0.5s;
         transition: all 0.5s;
         color: rgb(255, 255, 255);
+      }
+    }
+
+    .selectedNumber {
+      color: $blue;
+      text-shadow: none;
+
+      &[aria-hidden='true'] {
+        font-weight: 600;
       }
     }
   }
