@@ -2,6 +2,8 @@ import Header from '../../components/header/Header';
 import './Contact.scss';
 
 function Contact() {
+  document.title = 'Contact - Hugo Brothier';
+
   return (
     <div>
       <Header />

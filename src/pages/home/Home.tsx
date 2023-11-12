@@ -4,6 +4,8 @@ import './Home.scss';
 import { motion } from 'framer-motion';
 
 function Home() {
+  document.title = 'Hugo Brothier';
+
   return (
     <div>
       <Header />

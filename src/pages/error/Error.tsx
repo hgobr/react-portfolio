@@ -3,6 +3,8 @@ import Header from '../../components/header/Header';
 import './Error.scss';
 
 function Error() {
+  document.title = 'Error -Hugo Brothier';
+
   return (
     <div className="error">
       <Header />

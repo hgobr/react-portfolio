@@ -2,6 +2,8 @@ import Header from '../../components/header/Header';
 import './About.scss';
 
 function About() {
+  document.title = 'About - Hugo Brothier';
+
   return (
     <div>
       <Header />
