@@ -1,6 +1,6 @@
 import { motion, useDeprecatedInvertedScale } from 'framer-motion';
-import { closeSpring, openSpring } from './animations';
-import { CardData } from './types';
+import { closeSpring, openSpring } from './utils/animations';
+import { CardData } from './utils/types';
 
 type TitleProps = CardData & {
   isSelected: boolean;

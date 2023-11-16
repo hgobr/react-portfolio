@@ -1,13 +1,13 @@
 import { memo, useRef } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CardData } from './types';
+import { CardData } from './utils/types';
 import { Title } from './Title';
 import { Image } from './Image';
-import { closeSpring, openSpring } from './animations';
-import { useInvertedBorderRadius } from './useInvertedBorderRadius';
-import { useScrollConstraints } from './useScrollConstraints';
-import { useWheelScroll } from './useWheelScroll';
+import { closeSpring, openSpring } from './utils/animations';
+import { useInvertedBorderRadius } from './utils/useInvertedBorderRadius';
+import { useScrollConstraints } from './utils/useScrollConstraints';
+import { useWheelScroll } from './utils/useWheelScroll';
 import { MutableRefObject } from 'react';
 
 type CardProps = CardData & {

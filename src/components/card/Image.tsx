@@ -1,6 +1,6 @@
 import { motion, useDeprecatedInvertedScale } from 'framer-motion';
-import { closeSpring } from './animations';
-import { CardData } from './types';
+import { closeSpring } from './utils/animations';
+import { CardData } from './utils/types';
 
 type ImageProps = CardData & {
   isSelected: boolean;

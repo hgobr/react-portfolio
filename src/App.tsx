@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/home/Home';
-import Error from './pages/error/Error';
 import './index.scss';
-import Projects from './pages/projects/Projects';
-import About from './pages/about/About';
-import Contact from './pages/contact/Contact';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Error from './pages/Error/Error';
+import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
 
 function App() {
   return (
