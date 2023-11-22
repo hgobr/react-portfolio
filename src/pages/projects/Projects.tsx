@@ -1,3 +1,4 @@
+import CardList from '../../components/CardList/CardList';
 import Header from '../../components/Header/Header';
 import './Projects.scss';
 
@@ -10,6 +11,7 @@ function Projects() {
 
       <div className="content">
         <h3>PROJECTS</h3>
+        <CardList />
       </div>
     </div>
   );

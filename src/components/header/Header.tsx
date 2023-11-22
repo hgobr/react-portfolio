@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import HBlogo from '../../assets/HB-logo.svg';
+import HBlogo from '../../assets/icons/HB-logo.svg';
 import './Header.scss';
 
 type Pathname = '/' | '/projects' | '/about' | '/contact';

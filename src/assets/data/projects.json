@@ -1,24 +1,24 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "category": "react",
     "title": "my first post",
     "description": "this is my first post"
   },
   {
-    "id": "2",
+    "id": 2,
     "category": "javascript",
     "title": "my second post",
     "description": "this is my second post"
   },
   {
-    "id": "3",
+    "id": 3,
     "category": "typescript",
     "title": "my third post",
     "description": "this is my third post"
   },
   {
-    "id": "4",
+    "id": 4,
     "category": "html & css",
     "title": "my fourth post",
     "description": "this is my fourth post"

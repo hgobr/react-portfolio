@@ -5,4 +5,8 @@ $content-margin: 8rem 20%;
 
 body {
   background-color: $background;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
