@@ -13,6 +13,7 @@ export default function CardList() {
           title={card.title}
           description={card.description}
           image={`url('/src/assets/images/${card.id}.jpg')`}
+          icon={`url('/src/assets/icons/${card.category}.svg')`}
         />
       ))}
     </ul>
