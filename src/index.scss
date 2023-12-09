@@ -6,6 +6,16 @@ $content-margin: 8rem 20%;
 body {
   background-color: $background;
 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }

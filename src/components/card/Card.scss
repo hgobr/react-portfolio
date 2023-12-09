@@ -13,7 +13,6 @@
 
 $big-stone: #152536;
 $white: #fff;
-$smalt-blue: #4e958b;
 $maroon-flush: #c32361;
 $black: #000;
 $lite-grey: rgba($black, 0.2);
@@ -39,25 +38,34 @@ li.card {
   box-shadow: $box-shadow;
   overflow: hidden;
 
+  &:hover {
+    .thumb {
+      transform: scale(1.12);
+      filter: blur(1rem);
+    }
+  }
+
   .thumb {
     @include size(auto, $thumb-height);
     background: no-repeat center;
     background-size: cover;
     border-radius: $border-radius;
+    transition: ease 0.4s;
   }
 
   .infos {
     @include size(auto, $card-height);
     position: relative;
     padding: 8px 20px;
-    background: $white;
+    background: rgba(0, 0, 0, 0.6);
     transition: $timing-1 $transition;
 
     .title {
       position: relative;
       margin: 10px 0;
-      letter-spacing: 3px;
-      color: $big-stone;
+      letter-spacing: 2px;
+      color: rgb(236, 236, 236);
+
       font-size: 1rem;
       text-transform: uppercase;
       text-shadow: 0 0 0px lighten($big-stone, 20);
@@ -67,8 +75,9 @@ li.card {
       position: absolute;
       bottom: -12px;
       right: 0px;
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
+
       background: no-repeat center;
       background-size: 100% auto;
       filter: drop-shadow(1px 1px 4px rgb(0 0 0 / 0.2));
@@ -76,42 +85,72 @@ li.card {
 
     .category {
       text-transform: uppercase;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: $lite-big-stone;
       padding-bottom: 20px;
-      border-bottom: 1px solid $lite-grey;
+      border-bottom: 1px solid rgba(236, 236, 236, 0.4);
+      color: rgb(236, 236, 236);
+      opacity: 0.8;
     }
 
     .txt {
       padding-top: 20px;
       font-size: 1rem;
-      font-weight: 400;
-      color: black;
+      font-weight: 300;
+      color: rgb(236, 236, 236);
       opacity: 0;
-      transition: $timing-2 $transition;
+      transition: ease 1s;
     }
 
-    .details {
+    .githubLink {
       position: absolute;
-      bottom: 15px;
+      bottom: 20px;
       right: 20px;
-      padding-top: 10px;
-      letter-spacing: 1px;
-      color: $smalt-blue;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: ease 0.4s;
+
       opacity: 0;
-      transition: $timing-2 $transition;
+      transition: ease 0.4s;
+
+      .details {
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: ease 0.4s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .githubIcon {
+        position: relative;
+        bottom: 7px;
+        left: 5px;
+        width: 22px;
+        height: 22px;
+
+        background: url('/src/assets/icons/github.svg') no-repeat center;
+        background-size: 100% auto;
+        filter: drop-shadow(1px 1px 4px rgb(0 0 0 / 0.2));
+        filter: invert(100%) sepia(2%) saturate(641%) hue-rotate(209deg)
+          brightness(115%) contrast(80%);
+      }
     }
   }
 
   &:hover .infos {
     transform: translateY(-$thumb-height);
-    .seats,
-    .txt,
-    .details {
+    .githubLink,
+    .txt {
       opacity: 1;
+    }
+    .details {
+      opacity: 0.8;
     }
   }
 }

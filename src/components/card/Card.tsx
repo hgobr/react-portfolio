@@ -1,6 +1,10 @@
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './Card.scss';
 import { CardData } from './types';
+
+type CardProps = CardData & {
+  delay: number;
+};
 
 export default function Card({
   image,
@@ -8,9 +12,17 @@ export default function Card({
   category,
   description,
   icon,
-}: CardData) {
+  delay,
+  link,
+}: CardProps) {
   return (
-    <li className="card">
+    <motion.li
+      className="card"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 2.5, ease: [0.25, 1, 0.35, 1], delay }}
+    >
       <div className="thumb" style={{ backgroundImage: image }}></div>
       <div className="infos">
         <h2 className="title">
@@ -19,22 +31,10 @@ export default function Card({
         </h2>
         <h3 className="category">{category}</h3>
         <p className="txt">{description}</p>
-        <h3 className="details">github</h3>
+        <a className="githubLink" href={link}>
+          <h3 className="details">voir le projet</h3>
+        </a>
       </div>
-    </li>
+    </motion.li>
   );
-}
-
-{
-  /* <li className="card" style={{ backgroundImage: image }}>
-<div className="cardContainer">
-  <motion.div className="cardContent">
-    <motion.div className="titleContainer">
-      <span className="category">{category}</span>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </motion.div>
-  </motion.div>
-</div>
-</li> */
 }

@@ -1,0 +1,105 @@
+footer {
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+  border-top: 1px solid #008fd736;
+
+  margin-top: auto;
+
+  .container {
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footerItem {
+    margin: 0.8rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+
+  .date:hover {
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1),
+      1px -1px 0 rgba(255, 255, 255, 0.1), -1px 1px 0 rgba(255, 255, 255, 0.1),
+      1px 1px 0 rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    color: rgb(255, 255, 255);
+  }
+
+  .footerLogo {
+    width: 55px;
+    height: 55px;
+    background-image: url('/src/assets/icons/HB-logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .footerText {
+    display: flex;
+    flex-direction: column;
+    color: rgb(236, 236, 236);
+    font-size: 0.9rem;
+    line-height: 1.2;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 4px;
+
+      p {
+        font-weight: 400;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-weight: 200;
+      font-size: 13px;
+    }
+  }
+
+  .footerIcon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 1px 4px rgb(0 0 0 / 0.2));
+    filter: invert(100%) sepia(2%) saturate(641%) hue-rotate(209deg)
+      brightness(115%) contrast(80%);
+  }
+
+  .copyright {
+    width: 15px;
+    height: 15px;
+    background-image: url('/src/assets/icons/copyright.svg');
+  }
+
+  .links {
+    gap: 0.6rem;
+
+    a {
+      transition: ease 0.4s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .linkedin {
+    width: 32px;
+    height: 32px;
+    background-image: url('/src/assets/icons/linkedin.svg');
+  }
+
+  .github {
+    width: 30px;
+    height: 30px;
+    background-image: url('/src/assets/icons/github.svg');
+  }
+}

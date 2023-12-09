@@ -5,4 +5,5 @@ export interface CardData {
   description: string;
   image?: string;
   icon?: string;
+  link: string;
 }

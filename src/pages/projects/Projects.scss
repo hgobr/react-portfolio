@@ -1,0 +1,36 @@
+.projects {
+  .content {
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .linkContainer {
+      margin-bottom: 40px;
+      display: inline-block;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+      }
+
+      .githubIcon {
+        width: 19px;
+        height: 19px;
+
+        background: url('/src/assets/icons/github.svg') no-repeat center;
+        background-size: 100% auto;
+        filter: drop-shadow(1px 1px 4px rgb(0 0 0 / 0.2));
+        filter: invert(100%) sepia(2%) saturate(641%) hue-rotate(209deg)
+          brightness(115%) contrast(80%);
+      }
+    }
+  }
+}
