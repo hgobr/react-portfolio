@@ -34,7 +34,14 @@ function Projects() {
           </motion.h3>
           <h1>Mes Projets</h1>
 
-          <p>L'ensemble des projets est disponible sur GitHub</p>
+          <motion.p
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2.5, ease: [0.25, 1, 0.35, 1] }}
+          >
+            L'ensemble des projets est disponible sur GitHub
+          </motion.p>
 
           <motion.div
             className="linkContainer"

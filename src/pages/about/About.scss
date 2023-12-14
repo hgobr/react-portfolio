@@ -1,0 +1,51 @@
+$purple: #a56fff;
+$yellow: #d5b012;
+$blue: #20c1d8;
+$red: #c16266;
+$green: #90b061;
+$grey: #afb6af;
+
+.about {
+  .content {
+    h3 {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      .constTxt {
+        p {
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: $grey;
+          font-family: 'JetBrains Mono', sans-serif;
+        }
+
+        margin-left: 30px;
+
+        .space {
+          margin-left: 30px;
+        }
+
+        .purpleTxt {
+          color: $purple;
+        }
+
+        .yellowTxt {
+          color: $yellow;
+        }
+
+        .blueTxt {
+          color: $blue;
+        }
+
+        .redTxt {
+          color: $red;
+        }
+
+        .greenTxt {
+          color: $green;
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,14 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { TypeAnimation } from 'react-type-animation';
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './Home.scss';
-import { motion } from 'framer-motion';
-import Footer from '../../components/Footer/Footer';
 
 function Home() {
   document.title = 'Hugo Brothier';
+
+  const cursorClassName = 'custom-type-animation-cursor';
 
   return (
     <div className="page">
@@ -26,7 +29,19 @@ function Home() {
         >
           Hey, je m'appelle Hugo
         </motion.h3>
-        <h1>Je crée des sites et applications web</h1>
+        <h1>
+          <TypeAnimation
+            cursor={false}
+            className={cursorClassName}
+            sequence={[
+              500,
+              'Je crée des sites et applications web',
+              500,
+              (el) => el?.classList.remove(cursorClassName),
+            ]}
+            speed={40}
+          />
+        </h1>
         <p>Je suis un développeur web front-end basé sur Paris</p>
         <motion.div
           initial={{ opacity: 0, x: 150 }}
