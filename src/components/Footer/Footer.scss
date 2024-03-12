@@ -1,3 +1,5 @@
+@use './../../index.scss' as *;
+
 footer {
   text-align: center;
   width: 100%;
@@ -10,6 +12,14 @@ footer {
     margin: 0 20%;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      margin: 0 15%;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 10%;
+    }
   }
 
   .footerItem {
@@ -21,7 +31,8 @@ footer {
     transition: 0.25s;
   }
 
-  .date:hover {
+  .date:hover,
+  .date:active {
     text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1),
       1px -1px 0 rgba(255, 255, 255, 0.1), -1px 1px 0 rgba(255, 255, 255, 0.1),
       1px 1px 0 rgba(255, 255, 255, 0.1);
@@ -86,6 +97,10 @@ footer {
       transition: ease 0.4s;
 
       &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
         transform: scale(1.1);
       }
     }

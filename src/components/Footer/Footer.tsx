@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footerText">
             <span>
               <div className="copyright footerIcon"></div>
-              <p>2023</p>
+              <p>2024</p>
             </span>
             <p>HUGO BROTHIER</p>
           </div>

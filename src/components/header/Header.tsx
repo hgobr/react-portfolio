@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import HBlogo from '../../assets/icons/HB-logo.svg';
 import './Header.scss';
-
 type Pathname = '/' | '/projects' | '/about' | '/contact';
 
 function Header() {
@@ -13,6 +13,21 @@ function Header() {
     }
   };
 
+  const [buttonClass, setButtonClass] = useState('navButton unclicked');
+  const [navClass, setNavClass] = useState('mainNav closed');
+  const [isNavClicked, setIsNavClicked] = useState(false);
+
+  const onClickNavButton = () => {
+    if (!isNavClicked) {
+      setButtonClass('navButton clicked');
+      setNavClass('mainNav open');
+    } else {
+      setButtonClass('navButton unclicked');
+      setNavClass('mainNav closed');
+    }
+    setIsNavClicked(!isNavClicked);
+  };
+
   return (
     <header className="header">
       <nav>
@@ -21,7 +36,15 @@ function Header() {
             <img className="logo" src={HBlogo} />
           </Link>
         </div>
-        <ul className="mainNav">
+        <button
+          className={buttonClass}
+          aria-controls="mainNav"
+          aria-expanded="false"
+          onClick={onClickNavButton}
+        >
+          <span className="sr-only">Menu</span>
+        </button>
+        <ul id="mainNav" className={navClass}>
           <li>
             <Link to="/">
               <span className={selectedPathname('/')} aria-hidden="true">

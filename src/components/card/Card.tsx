@@ -4,6 +4,7 @@ import { CardData } from './types';
 
 type CardProps = CardData & {
   delay: number;
+  preview?: boolean;
 };
 
 export default function Card({
@@ -14,11 +15,12 @@ export default function Card({
   icon,
   delay,
   link,
+  preview,
 }: CardProps) {
   return (
     <motion.li
       className="card"
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: preview ? 0 : 100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 2.5, ease: [0.25, 1, 0.35, 1], delay }}

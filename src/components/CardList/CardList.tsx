@@ -3,12 +3,18 @@ import { CardData } from '../Card/types';
 import projects from './../../assets/data/projects.json';
 import './CardList.scss';
 
-export default function CardList() {
+type CardListProps = {
+  slice?: number;
+  preview?: boolean;
+};
+
+export default function CardList({ slice, preview }: CardListProps) {
   return (
     <ul className="cardList">
-      {projects.map((card: CardData, index) => (
+      {projects.slice(0, slice).map((card: CardData, index) => (
         <Card
-          delay={index * 0.15}
+          preview={preview}
+          delay={preview ? 0 : index * 0.15}
           key={card.id}
           category={card.category}
           title={card.title}

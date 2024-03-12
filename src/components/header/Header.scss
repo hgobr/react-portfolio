@@ -9,6 +9,10 @@
     margin-top: 2rem;
     margin-left: 4rem;
     font-weight: lighter;
+
+    @media (max-width: $small) {
+      margin-left: 2.5rem;
+    }
   }
 
   .wrapLogo {
@@ -25,11 +29,39 @@
         cursor: pointer;
         transform: scale(1.1);
       }
+
+      &:active {
+        transform: scale(1.1);
+      }
     }
   }
 
-  .mobileNavButton {
-    display: none;
+  .navButton {
+    display: block;
+    z-index: 1000;
+    transition: ease-in-out 0.2s;
+    border-radius: 5px;
+
+    background: url('/src/assets/icons/burger-menu.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: invert(95%) sepia(4%) saturate(1198%) hue-rotate(185deg)
+      brightness(118%) contrast(85%);
+
+    opacity: 0.9;
+    border: 0;
+    width: 2.5rem;
+    aspect-ratio: 1;
+
+    &:active {
+      transform: scale(1.07);
+    }
+  }
+
+  .clicked {
+    background-image: url('/src/assets/icons/cross.svg');
+    width: 3rem;
   }
 
   .mainNav {
@@ -42,7 +74,7 @@
 
     a {
       text-decoration: none;
-      color: rgb(236, 236, 236);
+      color: #ececec;
 
       position: relative;
 
@@ -106,13 +138,16 @@
     .mainNav {
       position: fixed;
       z-index: 999;
-
+      transform: translateX(100%);
       inset: 0 0 0 30%;
       flex-direction: column;
       padding: min(30vh, 10rem) 2rem;
       background: rgba(0, 0, 0, 0.9);
-      transform: translateX(100%);
-      transition: transform 350ms ease-out;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .open {
+      transform: translateX(0);
     }
 
     @supports (backdrop-filter: blur(1rem)) {
@@ -122,39 +157,20 @@
       }
     }
 
-    .mainNav[dataVisible='true'] {
-      transform: translateX(0);
-    }
+    .navButton {
+      margin-right: 3rem;
 
-    .mobileNavButton {
-      display: block;
-      position: absolute;
-      z-index: 1000;
-
-      background: url('../medias/burger_outline_128.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(207deg)
-        brightness(105%) contrast(100%);
-      opacity: 0.7;
-      border: 0;
-      width: 2rem;
-      aspect-ratio: 1;
-      top: 1rem;
-      right: 2rem;
+      @media (max-width: $small) {
+        margin-right: 2.5rem;
+      }
     }
 
     .mobileNavButton[aria-expanded='true'] {
-      background-image: url(../medias/cross_128px.png);
+      background-image: url('/src/assets/icons/cross.svg');
     }
 
     .wrapLogo {
       margin-top: 0.75rem;
-    }
-
-    .textLogo {
-      display: none;
     }
   }
 
@@ -165,6 +181,10 @@
   }
 
   @media (min-width: 43em) {
+    .navButton {
+      display: none;
+    }
+
     .mainNav {
       padding-block: 1.5rem;
       padding-inline: clamp(3rem, 11vh, 10rem);

@@ -2,6 +2,19 @@ $background: #0e141b;
 $blue: #008ed7;
 
 $content-margin: 8rem 20%;
+$content-margin-tablet: 8rem 15%;
+$content-margin-mobile: 4rem 10%;
+
+$text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+$montserrat: 'Montserrat', sans-serif;
+
+// media queries
+$small: 640px;
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1280px;
+$large: 1536px;
 
 body {
   background-color: $background;
