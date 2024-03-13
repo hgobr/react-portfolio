@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import './Error.scss';
+import Footer from '../../components/Footer/Footer';
+import Background from '../../components/Background/Background';
 
 function Error() {
   document.title = 'Error -Hugo Brothier';
 
   return (
-    <div className="error">
+    <div className="error page">
       <Header />
 
       <div className="content">
@@ -20,6 +22,9 @@ function Error() {
           </div>
         </div>
       </div>
+      <Footer />
+
+      <Background page="error" />
     </div>
   );
 }

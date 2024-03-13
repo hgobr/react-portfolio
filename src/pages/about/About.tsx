@@ -7,6 +7,7 @@ import {
 } from 'react-parallax-mouse';
 import { useEffect, useRef, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
+import Background from '../../components/Background/Background';
 
 function About() {
   document.title = 'About - Hugo Brothier';
@@ -108,7 +109,7 @@ function About() {
               >
                 <div className="constTxt">
                   <MouseParallaxChild factorX={0.2} factorY={0.3}>
-                    <p>
+                    <p className="constContainer">
                       <span className="purpleTxt">const </span>
                       <span className="yellowTxt">hugo </span>
                       <span className="blueTxt"> = </span>
@@ -116,19 +117,19 @@ function About() {
                     </p>
                   </MouseParallaxChild>
                   <MouseParallaxChild factorX={0.25} factorY={0.35}>
-                    <p>
+                    <p className="propertyContainer">
                       <span className="redTxt space">location</span>:
                       <span className="greenTxt"> 'Paris'</span>,
                     </p>
                   </MouseParallaxChild>
                   <MouseParallaxChild factorX={0.3} factorY={0.4}>
-                    <p>
+                    <p className="propertyContainer">
                       <span className="redTxt space">language</span>:
                       <span className="greenTxt"> 'TypeScript'</span>,
                     </p>
                   </MouseParallaxChild>
                   <MouseParallaxChild factorX={0.4} factorY={0.5}>
-                    <p>
+                    <p className="propertyContainer">
                       <span className="redTxt space">library</span>:
                       <span className="greenTxt"> 'React'</span>,
                     </p>
@@ -155,7 +156,10 @@ function About() {
               className="parallaxImgContainer"
             >
               <div className="imgContainer" ref={imgContainerRef}>
-                <img src="/src/assets/images/setup.png" className="setupImg" />
+                <img
+                  src="/src/assets/images/aboutImg01.jpg"
+                  className="setupImg"
+                />
               </div>
             </MouseParallaxChild>
           </motion.div>
@@ -223,6 +227,8 @@ function About() {
       </motion.div>
 
       <Footer />
+
+      <Background page="about" />
     </div>
   );
 }

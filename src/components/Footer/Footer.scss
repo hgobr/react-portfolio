@@ -96,10 +96,7 @@ footer {
     a {
       transition: ease 0.4s;
 
-      &:hover {
-        transform: scale(1.1);
-      }
-
+      &:hover,
       &:active {
         transform: scale(1.1);
       }

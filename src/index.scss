@@ -9,7 +9,7 @@ $text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 
 $montserrat: 'Montserrat', sans-serif;
 
-// media queries
+//* media queries
 $small: 640px;
 $mobile: 768px;
 $tablet: 1024px;
@@ -24,9 +24,37 @@ body {
   flex-direction: column;
 
   .page {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .svgBackground {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+
+    background-image: url('/src/assets/images/background/home-background.svg');
+
+    transition: opacity 0.35s ease-in-out;
+    opacity: 1;
+
+    transform: scale(1.05) translateX(var(--translateY))
+      translateY(var(--translateX));
+
+    @media (max-width: $tablet) {
+      background-image: url('/src/assets/images/background/home-background-mobile.svg');
+    }
   }
 
   &::-webkit-scrollbar {

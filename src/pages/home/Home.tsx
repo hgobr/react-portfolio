@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
+import Background from '../../components/Background/Background';
+import CardList from '../../components/CardList/CardList';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './Home.scss';
-import CardList from '../../components/CardList/CardList';
 
 function Home() {
   document.title = 'Hugo Brothier';
@@ -99,6 +100,8 @@ function Home() {
         </div>
       </motion.div>
       <Footer />
+
+      <Background page="home" />
     </div>
   );
 }
