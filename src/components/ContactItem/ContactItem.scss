@@ -1,0 +1,65 @@
+@use './../../index.scss' as *;
+
+.contactItemContainer {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  width: 100%;
+  transition: hover 0.3s ease-in-out;
+
+  .leftText {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+
+    @media (max-width: 400px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .linkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+
+    @media (max-width: 400px) {
+      width: 190px;
+    }
+
+    border: 1px solid $blue;
+    padding: 5px;
+    border-radius: 5px;
+
+    .linkText {
+      font-size: 1rem;
+      font-weight: 200;
+      letter-spacing: 1px;
+      margin-left: 3px;
+
+      @media (max-width: 400px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: $blue;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      height: 35px;
+      width: 35px;
+      color: inherit;
+      text-decoration: none;
+
+      i {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

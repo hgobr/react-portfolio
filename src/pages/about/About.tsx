@@ -180,11 +180,11 @@ function About() {
             passionné par la création d'expériences utilisateur exceptionnelles.
             Spécialisé en{' '}
             <span className={`underlineLink ${isActive ? 'hoverEffect' : ''}`}>
-              React
-            </span>{' '}
-            et{' '}
-            <span className={`underlineLink ${isActive ? 'hoverEffect' : ''}`}>
               TypeScript
+            </span>{' '}
+            avec{' '}
+            <span className={`underlineLink ${isActive ? 'hoverEffect' : ''}`}>
+              React
             </span>
             , j'aime repousser les limites de la conception graphique pour créer
             des interfaces à la fois esthétiques et fonctionnelles.

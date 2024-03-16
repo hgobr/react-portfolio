@@ -25,6 +25,7 @@ export default function Background({ page }: BackgroundProps) {
 
   useEffect(() => {
     const element = svgBackgroundRef.current;
+
     const backgrounds = {
       home: {
         desktop: '/src/assets/images/background/home-background.svg',
