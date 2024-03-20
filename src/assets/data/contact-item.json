@@ -1,15 +1,9 @@
 [
   {
     "leftText": "mail",
-    "linkText": "hugo.brothier@hotmail.fr",
-    "icon": "fa-solid fa-envelope",
-    "href": "mailto:hugo.brothier@hotmail.fr"
-  },
-  {
-    "leftText": "linkedin",
-    "linkText": "Hugo Brothier",
-    "icon": "fa-brands fa-linkedin-in",
-    "href": "https://www.linkedin.com/in/hugo-brothier/"
+    "linkText": "hgoweb@outlook.com",
+    "icon": "fa-regular fa-envelope",
+    "href": "mailto:hgoweb@outlook.com"
   },
   {
     "leftText": "github",
@@ -18,9 +12,15 @@
     "href": "https://github.com/hgoweb"
   },
   {
+    "leftText": "linkedin",
+    "linkText": "Hugo Brothier",
+    "icon": "fa-brands fa-linkedin-in",
+    "href": "https://www.linkedin.com/in/hugo-brothier/"
+  },
+  {
     "leftText": "CV",
     "linkText": "Consulter mon CV",
-    "icon": "fa-solid fa-download",
+    "icon": "fa-regular fa-file",
     "href": "https://www.canva.com/design/DAF_n3SyLJg/eNimijhkLtESmYZjdBWfMA/view?utm_content=DAF_n3SyLJg&utm_campaign=designshare&utm_medium=link&utm_source=editor"
   }
 ]

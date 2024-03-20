@@ -22,7 +22,7 @@ export default function ContactItem({
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0 }}
       whileHover={{
-        translateX: -30,
+        translateX: -20,
         transition: { duration: 0.3 },
       }}
       transition={{ duration: 1, ease: [0.25, 1, 0.35, 1], delay }}

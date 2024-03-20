@@ -2,36 +2,43 @@
   {
     "id": 1,
     "category": "react native",
-    "title": "my first post",
-    "description": "this is my first post",
-    "link": "https://github.com/hgobr"
+    "title": "feels",
+    "description": "Poste de développeur mobile React Native en alternance chez Feels (2022/2023)",
+    "link": "https://www.feels-app.com/fr/"
   },
   {
     "id": 2,
-    "category": "javascript",
-    "title": "my second post",
-    "description": "this is my second post",
-    "link": "https://github.com/hgobr"
+    "category": "react",
+    "title": "kasa",
+    "description": "Application React de location de logements entre particuliers",
+    "link": "https://github.com/hgoweb/Kasa"
   },
   {
     "id": 3,
-    "category": "typescript",
-    "title": "my third post",
-    "description": "this is my third post",
-    "link": "https://github.com/hgobr"
+    "category": "react",
+    "title": "some movies",
+    "description": "Application React de sélection de films avec React utilisant The Movie Database API",
+    "link": "https://github.com/hgoweb/SomeMovies"
   },
   {
     "id": 4,
-    "category": "react",
-    "title": "my fourth post",
-    "description": "this is my fourth post",
-    "link": "https://github.com/hgobr"
+    "category": "typescript",
+    "title": "hot takes",
+    "description": "Application Angular de partages de sauces épicées",
+    "link": "https://github.com/hgoweb/HotTakes"
   },
   {
     "id": 5,
-    "category": "scss",
-    "title": "my fifth post",
-    "description": "this is my fifth post",
+    "category": "javascript",
+    "title": "kanap",
+    "description": "Site web d'achats de canapés en ligne",
+    "link": "https://github.com/hgoweb/Kanap"
+  },
+  {
+    "id": 6,
+    "category": "javascript",
+    "title": "la panthère",
+    "description": "Site web qui présente une agence de web design basée à Lyon",
     "link": "https://github.com/hgobr"
   }
 ]
