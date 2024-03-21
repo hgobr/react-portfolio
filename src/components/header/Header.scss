@@ -43,7 +43,7 @@
     transition: ease-in-out 0.2s;
     border-radius: 5px;
 
-    background: url('/src/assets/icons/burger-menu.svg');
+    background: url('/icons/burger-menu.svg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -61,7 +61,7 @@
   }
 
   .clicked {
-    background-image: url('/src/assets/icons/cross.svg');
+    background-image: url('/icons/cross.svg');
     width: 3rem;
   }
 
@@ -167,7 +167,7 @@
     }
 
     .mobileNavButton[aria-expanded='true'] {
-      background-image: url('/src/assets/icons/cross.svg');
+      background-image: url('/icons/cross.svg');
     }
 
     .wrapLogo {

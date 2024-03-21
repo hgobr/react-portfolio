@@ -22,17 +22,6 @@
         justify-content: flex-start;
         gap: 4px;
       }
-
-      .githubIcon {
-        width: 19px;
-        height: 19px;
-
-        background: url('/src/assets/icons/github.svg') no-repeat center;
-        background-size: 100% auto;
-        filter: drop-shadow(1px 1px 4px rgb(0 0 0 / 0.2));
-        filter: invert(100%) sepia(2%) saturate(641%) hue-rotate(209deg)
-          brightness(115%) contrast(80%);
-      }
     }
   }
 }

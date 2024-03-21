@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './Card.scss';
-import { CardData } from './types';
+import { CardData } from './type';
 
 type CardProps = CardData & {
   delay: number;

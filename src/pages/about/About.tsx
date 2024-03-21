@@ -156,10 +156,7 @@ function About() {
               className="parallaxImgContainer"
             >
               <div className="imgContainer" ref={imgContainerRef}>
-                <img
-                  src="/src/assets/images/aboutImg01.jpg"
-                  className="setupImg"
-                />
+                <img src="/images/aboutImg01.jpg" className="setupImg" />
               </div>
             </MouseParallaxChild>
           </motion.div>

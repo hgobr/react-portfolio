@@ -28,24 +28,24 @@ export default function Background({ page }: BackgroundProps) {
 
     const backgrounds = {
       home: {
-        desktop: '/src/assets/images/background/home-background.svg',
-        mobile: '/src/assets/images/background/home-background-mobile.svg',
+        desktop: '/backgrounds/home-background.svg',
+        mobile: '/backgrounds/home-background-mobile.svg',
       },
       about: {
-        desktop: '/src/assets/images/background/about-background.svg',
-        mobile: '/src/assets/images/background/about-background-mobile.svg',
+        desktop: '/backgrounds/about-background.svg',
+        mobile: '/backgrounds/about-background-mobile.svg',
       },
       projects: {
-        desktop: '/src/assets/images/background/projects-background.svg',
-        mobile: '/src/assets/images/background/projects-background-mobile.svg',
+        desktop: '/backgrounds/projects-background.svg',
+        mobile: '/backgrounds/projects-background-mobile.svg',
       },
       contact: {
-        desktop: '/src/assets/images/background/contact-background.svg',
-        mobile: '/src/assets/images/background/contact-background-mobile.svg',
+        desktop: '/backgrounds/contact-background.svg',
+        mobile: '/backgrounds/contact-background-mobile.svg',
       },
       error: {
-        desktop: '/src/assets/images/background/error-background.svg',
-        mobile: '/src/assets/images/background/error-background-mobile.svg',
+        desktop: '/backgrounds/error-background.svg',
+        mobile: '/backgrounds/error-background-mobile.svg',
       },
     };
 

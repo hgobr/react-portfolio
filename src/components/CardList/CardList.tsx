@@ -1,5 +1,5 @@
 import Card from '../Card/Card';
-import { CardData } from '../Card/types';
+import { CardData } from '../Card/type';
 import projects from './../../assets/data/projects.json';
 import './CardList.scss';
 
@@ -19,8 +19,8 @@ export default function CardList({ slice, preview }: CardListProps) {
           category={card.category}
           title={card.title}
           description={card.description}
-          image={`url('/src/assets/images/projects/${card.id}.jpg')`}
-          icon={`url('./../../assets/icons/${card.category}.svg')`}
+          image={`url('/projects/${card.id}.jpg')`}
+          icon={`url('/icons/${card.category}.svg')`}
           link={card.link}
         />
       ))}
