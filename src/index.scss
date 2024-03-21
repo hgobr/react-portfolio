@@ -51,10 +51,6 @@ body {
 
     transform: scale(1.05) translateX(var(--translateY))
       translateY(var(--translateX));
-
-    @media (max-width: $tablet) {
-      background-image: url('/src/assets/images/background/home-background-mobile.svg');
-    }
   }
 
   &::-webkit-scrollbar {
