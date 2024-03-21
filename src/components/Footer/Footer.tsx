@@ -23,7 +23,7 @@ export default function Footer() {
             target="_blank"
           ></a>
           <a
-            href="https://github.com/hgobr"
+            href="https://github.com/hgoweb"
             className="github footerIcon"
             target="_blank"
           ></a>
