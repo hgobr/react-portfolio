@@ -20,6 +20,13 @@ function Home() {
     }
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="page">
       <Header />
@@ -92,7 +99,11 @@ function Home() {
             transition={{ duration: 2.5, ease: [0.25, 1, 0.35, 1] }}
             className="projectsButton"
           >
-            <Link to="/projects" className="underlineLink projectsLink">
+            <Link
+              to="/projects"
+              className="underlineLink projectsLink"
+              onClick={scrollToTop}
+            >
               {'Tout voir '}
               <i className="fa-solid fa-angles-right fa-sm"></i>
             </Link>

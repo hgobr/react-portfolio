@@ -29,6 +29,10 @@ footer {
     align-items: center;
     text-decoration: none;
     transition: 0.25s;
+
+    @media (max-width: $small) {
+      margin: 0.5rem 0;
+    }
   }
 
   .date:hover,

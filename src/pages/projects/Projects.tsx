@@ -52,12 +52,12 @@ function Projects() {
             transition={{ duration: 2.5, ease: [0.25, 1, 0.35, 1] }}
           >
             <a
-              href="https://github.com/hgobr"
+              href="https://github.com/hgoweb"
               className="underlineLink"
               target="_blank"
             >
               <span>GitHub</span>
-              <div className="githubIcon"></div>
+              <i className="fab fa-github"></i>
             </a>
           </motion.div>
         </motion.div>
