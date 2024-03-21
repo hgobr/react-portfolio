@@ -20,7 +20,7 @@ export default function CardList({ slice, preview }: CardListProps) {
           title={card.title}
           description={card.description}
           image={`url('/src/assets/images/projects/${card.id}.jpg')`}
-          icon={`url('/src/assets/icons/${card.category}.svg')`}
+          icon={`url('./../../assets/icons/${card.category}.svg')`}
           link={card.link}
         />
       ))}
