@@ -2,10 +2,17 @@ import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer>
       <div className="container">
-        <Link to="/" className="footerItem date">
+        <Link to="/" className="footerItem date" onClick={scrollToTop}>
           <div className="footerLogo"></div>
           <div className="footerText">
             <span>
